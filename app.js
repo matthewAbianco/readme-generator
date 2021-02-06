@@ -4,32 +4,143 @@ const generatePage = require('./src/readmepage');
 
 const promptUser = () => {
   return inquirer.prompt([
+
+
+    // 1.description
+    // 2.table of contents
+    // 3.installation
+    // 4.usage
+    // 5.licesnse
+    // 6.contributing
+    // 7.tests
+    // 8.questions
+
+
+
+// Project Name
     {
       type: 'input',
-      name: 'name',
-      message: 'What is your name? (Required)',
+      name: 'projectName',
+      message: 'What is your projects name? (Required)',
       validate: nameInput => {
         if (nameInput) {
           return true;
         } else {
-          console.log('Please enter your name!');
+          console.log('Please enter your projects name!');
           return false;
         }
       }
     },
+// Project description
     {
       type: 'input',
-      name: 'github',
-      message: 'Enter your GitHub Username (Required)',
+      name: 'description',
+      message: 'Enter a discription of the project. (Required)',
       validate: githubInput => {
         if (githubInput) {
           return true;
         } else {
-          console.log('Please enter your GitHub username!');
+          console.log('Tell people about your project!');
           return false;
         }
       }
     },
+// Project installation
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Describe how to install the application. (Required)',
+        validate: githubInput => {
+          if (githubInput) {
+            return true;
+          } else {
+            console.log('Tell people how to install it!');
+            return false;
+          }
+        }
+      },
+// Project usage
+{
+    type: 'input',
+    name: 'usage',
+    message: 'Describe how or what this is used for.  (Required)',
+    validate: githubInput => {
+      if (githubInput) {
+        return true;
+      } else {
+        console.log('Tell people what it is used for!');
+        return false;
+      }
+    }
+  },
+
+  // Project title
+  {
+    type: 'list',
+    name: 'license',
+    message: 'What license would you like to give your project?',
+    choices: [
+        "Academic",
+        "GNU",
+        "MIT",
+        "ISC",
+        "Mozilla",
+        "Open"
+    ],
+    validate: githubInput => {
+      if (githubInput) {
+        return true;
+      } else {
+        console.log('Please select a license for your project.');
+        return false;
+      }
+    }
+  },
+
+  // what to do if they have questions about the project
+{
+    type: 'input',
+    name: 'questions',
+    message: 'What do people do if they have issues.  (Required)',
+    validate: githubInput => {
+      if (githubInput) {
+        return true;
+      } else {
+        console.log('tell people what to do if they have questions!');
+        return false;
+      }
+    }
+  },
+// Github Username
+{
+    type: 'input',
+    name: 'usage',
+    message: 'What is your Github username?  (Required)',
+    validate: githubInput => {
+      if (githubInput) {
+        return true;
+      } else {
+        console.log('Please enter a valid Github Username!');
+        return false;
+      }
+    }
+  },
+// Email
+{
+    type: 'input',
+    name: 'Email',
+    message: 'Enter your email address.  (Required)',
+    validate: githubInput => {
+      if (githubInput) {
+        return true;
+      } else {
+        console.log('please enter a valid email address!');
+        return false;
+      }
+    }
+  },
+
+
     {
       type: 'confirm',
       name: 'confirmAbout',

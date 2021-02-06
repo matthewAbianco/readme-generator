@@ -13,6 +13,17 @@ module.exports = (name, github) => {
     <body>
       <h1>${name}</h1>
       <h2><a href="https://github.com/${github}">Github</a></h2>
+
+<!-- the 8 different sections that need to be generated
+      1.description
+      2.table of contents
+      3.installation
+      4.usage
+      5.licesnse
+      6.contributing
+      7.tests
+      8.questions
+
     </body>
     </html>
     `;
