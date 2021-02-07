@@ -1,31 +1,49 @@
-module.exports = (name, github) => {
-    return `
-    <!DOCTYPE html>
-    <html lang="en">
-    
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Portfolio Demo</title>
-    </head>
-    
-    <body>
-      <h1>${name}</h1>
-      <h2><a href="https://github.com/${github}">Github</a></h2>
+// generateReadme function populating the README.md
+function generateReadme(response) {
+  return `
+<h1>${response.projectName} </h1>
 
-<!-- the 8 different sections that need to be generated
-      1.description
-      2.table of contents
-      3.installation
-      4.usage
-      5.licesnse
-      6.contributing
-      7.tests
-      8.questions
+![badge](https://img.shields.io/badge/license-${response.license}-blue)<br />
 
-    </body>
-    </html>
-    `;
-  };
-  
+## <h2>Description</h2>
+ ${response.description}
+
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+ ${response.installation}
+
+## Usage
+ ${response.usage}
+
+## License
+![badge](https://img.shields.io/badge/license-${response.license}-brightgreen)
+<br />
+This application is covered by the ${response.license} license. 
+
+## Contributing
+ ${response.contributing}
+
+## Tests
+ ${response.tests}
+
+## <h2 >Questions</h2>
+ ${response.questions}<br />
+ <br />
+ Email me with any questions: ${response.email}<br /><br />
+<br />
+Find more of: [${response.username}](https://github.com/${response.username})<br />
+
+
+
+  `;
+}
+
+module.exports = generateReadme;
