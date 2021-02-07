@@ -6,6 +6,12 @@ I created a README.md template that can be run using node.js. It will ask you a 
 <img src="img/app.png">
 
 
+
+## Video of deployed application
+
+https://drive.google.com/file/d/1X3EwVwdPMdGvG95eDg1WwRJGGJkZfzgB/view
+
+
 ## Resources used
 
 1. Youtube
