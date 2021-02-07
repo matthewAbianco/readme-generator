@@ -38,11 +38,6 @@ This application is covered by the ${response.license} license.
  ${response.questions}<br />
  <br />
  Email me with any questions: ${response.email}<br /><br />
-<br />
-Find more of: [${response.username}](https://github.com/${response.username})<br />
-
-
-
   `;
 }
 
