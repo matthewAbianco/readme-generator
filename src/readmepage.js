@@ -24,7 +24,7 @@ function generateReadme(response) {
  ${response.usage}
 
 ## License
-![badge](https://img.shields.io/badge/license-${response.license}-brightgreen)
+![badge](https://img.shields.io/badge/license-${response.license}-darkyellow)
 <br />
 This application is covered by the ${response.license} license. 
 
