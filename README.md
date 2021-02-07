@@ -3,7 +3,7 @@
 
 I created a README.md template that can be run using node.js. It will ask you a series of questions that will then generate the content of the README.md file. Hopefully you find it as useful as I do! 
 
-![](images/app.png)
+<img src="img/app.png">
 
 
 ## Resources used
